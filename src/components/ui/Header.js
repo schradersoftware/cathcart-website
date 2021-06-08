@@ -19,6 +19,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import SectionHeader from './SectionHeader';
+
 import logo from '../../assets/logo.svg';
 
 function ElevationScroll(props) {
@@ -121,7 +123,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header(props) {
+export default function Header({
+  value,
+  selectedIndex,
+  setValue,
+  setSelectedIndex,
+  title,
+}) {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -130,7 +138,7 @@ export default function Header(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleChange = (e, newValue) => {
-    props.setValue(newValue);
+    setValue(newValue);
   };
 
   const routes = [
@@ -145,13 +153,10 @@ export default function Header(props) {
     [...routes].forEach((route) => {
       switch (window.location.pathname) {
         case `${route.link}`:
-          if (props.value !== route.activeIndex) {
-            props.setValue(route.activeIndex);
-            if (
-              route.selectedIndex &&
-              route.selectedIndex !== props.selectedIndex
-            ) {
-              props.setSelectedIndex(route.selectedIndex);
+          if (value !== route.activeIndex) {
+            setValue(route.activeIndex);
+            if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
+              setSelectedIndex(route.selectedIndex);
             }
           }
           break;
@@ -159,12 +164,12 @@ export default function Header(props) {
           break;
       }
     });
-  }, [props.value, props.selectedIndex, routes]);
+  }, [value, selectedIndex, routes]);
 
   const tabs = (
     <React.Fragment>
       <Tabs
-        value={props.value}
+        value={value}
         onChange={handleChange}
         className={classes.tabContainer}
         indicatorColor='primary'
@@ -201,11 +206,11 @@ export default function Header(props) {
               button
               component={Link}
               to={route.link}
-              selected={props.value === route.activeIndex}
+              selected={value === route.activeIndex}
               classes={{ selected: classes.drawerItemSelected }}
               onClick={() => {
                 setOpenDrawer(false);
-                props.setValue(route.activeIndex);
+                setValue(route.activeIndex);
               }}
             >
               <ListItemText className={classes.drawerItem} disableTypography>
@@ -236,7 +241,7 @@ export default function Header(props) {
               disableRipple
               className={classes.logoContainer}
               onClick={() => {
-                props.setValue();
+                setValue();
               }}
             >
               <img alt='company logo' className={classes.logo} src={logo} />

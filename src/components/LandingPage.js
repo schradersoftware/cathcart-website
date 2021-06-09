@@ -84,7 +84,7 @@ export default function LandingPage(props) {
               <IconButton
                 disableRipple
                 className={classes.chevronButton}
-                href='#text-buttons'
+                href='#whoweare'
                 color='primary'
               >
                 <img

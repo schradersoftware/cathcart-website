@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tabContainer: {
     marginLeft: 'auto',
+    marginRight: '2em',
   },
   tab: {
     ...theme.typography.tab,

@@ -13,8 +13,8 @@ export default function WhoWeAre(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div style={{ height: '2600px' }}>
-      <h1>This is our past sales!!</h1>
+    <div id='whoweare' style={{ height: '2600px', backgroundColor: 'red' }}>
+      <h1>This is who we are!!</h1>
     </div>
   );
 }

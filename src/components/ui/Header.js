@@ -7,7 +7,8 @@ import { makeStyles, useTheme, withTheme } from '@material-ui/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -143,11 +144,10 @@ export default function Header({
   };
 
   const routes = [
-    // { name: 'Home', link: '/', activeIndex: 0 },
-    { name: 'Past Sales', link: '/pastsales', activeIndex: 0 },
-    { name: 'Who We Are', link: '/whoweare', activeIndex: 1 },
-    { name: 'Services', link: '/services', activeIndex: 2 },
-    { name: 'Contact Us', link: '/contact', activeIndex: 3 },
+    { name: 'Past Sales', link: '/#pastsales', activeIndex: 1 },
+    { name: 'Who We Are', link: '/#whoweare', activeIndex: 2 },
+    { name: 'Services', link: '/#services', activeIndex: 3 },
+    { name: 'Contact Us', link: '/#contact', activeIndex: 4 },
   ];
 
   useEffect(() => {
@@ -238,7 +238,7 @@ export default function Header({
           <Toolbar disableGutters={true}>
             <Button
               component={Link}
-              to='/'
+              to='/#top'
               disableRipple
               className={classes.logoContainer}
               onClick={() => {

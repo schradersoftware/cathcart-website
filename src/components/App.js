@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Header from './ui/Header';
 import LandingPage from './LandingPage';
+import ContactUs from './ContactUs';
+import PastSales from './PastSales';
+import Services from './Services';
+import WhoWeAre from './WhoWeAre';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
@@ -24,8 +28,18 @@ function App() {
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndex}
         />
+        <Switch>
+          <Route path='#pastsales' exact component={PastSales} />
+          <Route path='#whoweare' exact component={WhoWeAre} />
+          <Route path='#pastsales' exact component={PastSales} />
+          <Route path='#whoweare' exact component={WhoWeAre} />
+        </Switch>
       </BrowserRouter>
       <LandingPage />
+      <PastSales />
+      <WhoWeAre />
+      <Services />
+      <ContactUs />
     </ThemeProvider>
   );
 }

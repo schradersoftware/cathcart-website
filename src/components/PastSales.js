@@ -13,8 +13,13 @@ export default function PastSales(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div style={{ height: '2600px' }}>
-      <h1>This is our past sales!!</h1>
-    </div>
+    <React.Fragment>
+      <div
+        id='pastsales'
+        style={{ height: '2600px', backgroundColor: 'black' }}
+      >
+        <h1>This is our past sales!!</h1>
+      </div>
+    </React.Fragment>
   );
 }

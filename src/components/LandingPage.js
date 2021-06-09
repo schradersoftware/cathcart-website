@@ -93,7 +93,6 @@ export default function LandingPage(props) {
                   alt='down arrow'
                 />
               </IconButton>
-
               <Grid
                 container
                 justify={matchesSM ? 'center' : undefined}

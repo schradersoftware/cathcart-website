@@ -16,10 +16,8 @@ export default function PastSales(props) {
     <React.Fragment>
       <div
         id='pastsales'
-        style={{ height: '2600px', backgroundColor: 'black' }}
-      >
-        <h1>This is our past sales!!</h1>
-      </div>
+        style={{ height: '2600px', backgroundColor: '#3D9970' }}
+      ></div>
     </React.Fragment>
   );
 }

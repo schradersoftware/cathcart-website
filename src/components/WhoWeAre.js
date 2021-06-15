@@ -13,8 +13,9 @@ export default function WhoWeAre(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div id='whoweare' style={{ height: '2600px', backgroundColor: 'red' }}>
-      <h1>This is who we are!!</h1>
-    </div>
+    <div
+      id='whoweare'
+      style={{ height: '2600px', backgroundColor: '#7FDBFF' }}
+    ></div>
   );
 }

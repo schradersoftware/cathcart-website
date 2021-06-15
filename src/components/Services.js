@@ -13,8 +13,9 @@ export default function Services(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div id='services' style={{ height: '2600px', backgroundColor: 'green' }}>
-      <h1>This is our services!!</h1>
-    </div>
+    <div
+      id='services'
+      style={{ height: '2600px', backgroundColor: '#01FF70' }}
+    ></div>
   );
 }

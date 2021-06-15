@@ -15,9 +15,7 @@ export default function ContactUs(props) {
   return (
     <div
       id='contact'
-      style={{ height: '2600px', backgroundColor: 'lightgray' }}
-    >
-      <h1>This is our contact us page!!</h1>
-    </div>
+      style={{ height: '2600px', backgroundColor: '#FF851B' }}
+    ></div>
   );
 }

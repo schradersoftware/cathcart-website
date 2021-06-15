@@ -13,7 +13,7 @@ export default function Footer(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div id='footer' style={{ height: '2600px', backgroundColor: 'magenta' }}>
+    <div id='footer' style={{ height: '2200px', backgroundColor: 'magenta' }}>
       <h1>This is the footer!!</h1>
     </div>
   );

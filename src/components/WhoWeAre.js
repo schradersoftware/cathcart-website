@@ -15,7 +15,7 @@ export default function WhoWeAre(props) {
   return (
     <div
       id='whoweare'
-      style={{ height: '2600px', backgroundColor: '#7FDBFF' }}
+      style={{ height: '2200px', backgroundColor: '#7FDBFF' }}
     ></div>
   );
 }

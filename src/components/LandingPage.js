@@ -65,7 +65,7 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div style={{ height: '2600px' }}>
+    <div style={{ height: '960px' }}>
       <Grid
         container
         alignItems='center'

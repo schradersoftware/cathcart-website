@@ -15,7 +15,7 @@ export default function Services(props) {
   return (
     <div
       id='services'
-      style={{ height: '2600px', backgroundColor: '#01FF70' }}
+      style={{ height: '2200px', backgroundColor: '#85144b' }}
     ></div>
   );
 }

@@ -5,7 +5,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 
-import background from '../assets/background.jpg';
+import background2 from '../assets/background2.jpg';
 import chevron from '../assets/chevron-down.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   background: {
-    backgroundImage: `url(${background})`,
+    backgroundImage: `url(${background2})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',

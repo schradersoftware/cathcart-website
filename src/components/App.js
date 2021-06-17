@@ -16,6 +16,34 @@ const header = [
   },
 ];
 
+const whatWeDo = {
+  sectionHeader: {
+    barColor: 'teal',
+    titleColor: 'teal',
+  },
+  cards: [
+    {
+      title: "Selling!",
+      copy: "We work with our clients to develop a customized plan to help sell their properties on the open market for the best price.",
+      // imageUrl: "/src/assets/checklist.svg",
+      imageUrl: "{checklist}",
+      imageTitle: "Email"
+    },
+    {
+      title: "Evaluation!",
+      copy: "This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area.",
+      imageUrl: "whatwedo1",
+      imageTitle: "Checklist"
+    },
+    {
+      title: "Negotiation!!",
+      copy: "There are no upfront costs to our services. Our competitive commission structure ensures that our team will work tirelessly.",
+      imageUrl: "email",
+      imageTitle: "House"
+    },
+  ]
+};
+
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [value, setValue] = useState(0);
@@ -37,7 +65,7 @@ function App() {
         </Switch>
       </BrowserRouter>
       <LandingPage />
-      <WhatWeDo />
+      <WhatWeDo  whatWeDoObject={whatWeDo} />
       <PastSales />
       <WhoWeAre />
       <Services />

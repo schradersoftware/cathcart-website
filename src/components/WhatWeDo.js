@@ -24,22 +24,33 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     marginTop: '4em',
     maxWidth: '65vw',
-
-    [theme.breakpoints.down('xs')]: {
+    justifyContent: 'space-around',
+    [theme.breakpoints.only('xs')]: {
       marginBottom: '2em',
-      height: "1400px",
+      height: '145vh',
     },
-    [theme.breakpoints.up('xs')]: {
-      marginTop: '2.5em'
+    [theme.breakpoints.only('sm')]: {
+      marginBottom: '2em',
+      height: '145vh',
+    },
+    [theme.breakpoints.only('md')]: {
+      marginBottom: '2em',
+      height: '145vh',
+      width: '65vw',
+    },
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: '2em',
+    },
+    [theme.breakpoints.only('xl')]: {
+      marginBottom: '2em',
     },
   },
   contentContainer: {
-    marginTop: '8em',
+    marginTop: '4em',
     [theme.breakpoints.down('xs')]: {
       marginTop: '2em',
-      
     },
-  }
+  },
 }));
 
 const whatWeDoObject = {
@@ -47,76 +58,60 @@ const whatWeDoObject = {
   titleColor: 'teal',
 };
 
-export default function WhatWeDo(props) {
+export default function WhatWeDo({ whatWeDoObject }) {
   const classes = useStyles();
   const theme = useTheme();
 
   return (
     <React.Fragment>
-      <Grid container direction="row" justify="center" className={classes.contentContainer}>
-      <SectionHeader
-        title='WHAT WE DO'
-        barColor={whatWeDoObject.barColor}
-        titleColor={whatWeDoObject.titleColor}
-      />
+      <Grid
+        container
+        direction='row'
+        justify='center'
+        className={classes.contentContainer}
+      >
+        <SectionHeader
+          title='WHAT WE DO'
+          barColor={whatWeDoObject.sectionHeader.barColor}
+          titleColor={whatWeDoObject.sectionHeader.titleColor}
+        />
+        <Grid
+          container
+          xs={12}
+          direction='row'
+          justify='space-evenly'
+          alignItems='center'
+          className={classes.cardContainer}
+        >
+          {whatWeDoObject.cards.map((card, index) => {
+            return (
+              <Card key={`${index}`} className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    // style={{ height: '20px', paddingTop: '56%' }}
+                    className={classes.media}
+                    image={email}
+                    title={card.imageTitle}
+                  />
 
-      <Grid container direction='row' justify='space-evenly' alignItems='center' className={classes.cardContainer}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={whatwedo1}
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Evaluation
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                Cleveland Apartment Brokers specializes in multifamily &
-                apartment building sales in the state of Ohio.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={email}
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Marketing
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                We work with our clients to develop a customized plan to help sell their properties on the open market for the best price.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={checklist}
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Negotiation
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                There are no upfront costs to our services. Our competitive commission structure ensures that our team will work tirelessly.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+                  <CardContent>
+                    <Typography gutterBottom variant='h5' component='h2'>
+                      {card.title}
+                    </Typography>
+                    <Typography
+                      variant='body2'
+                      color='textSecondary'
+                      component='p'
+                    >
+                      {card.copy}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            );
+          })}
         </Grid>
-        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }

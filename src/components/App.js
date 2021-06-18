@@ -9,7 +9,6 @@ import WhatWeDo from './WhatWeDo';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
-import { HashLink as Link } from 'react-router-hash-link';
 
 const header = [
   {

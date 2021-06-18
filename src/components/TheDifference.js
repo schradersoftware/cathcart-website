@@ -7,14 +7,14 @@ import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({}));
 
-export default function Services(props) {
+export default function TheDifference(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <div
-      id='services'
+      id='thedifference'
       style={{ height: '2200px', backgroundColor: '#85144b' }}
     ></div>
   );

@@ -4,6 +4,8 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import scrollWithOffset from './Scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import background2 from '../assets/background2.jpg';
 import chevron from '../assets/chevron-down.svg';
@@ -84,8 +86,11 @@ export default function LandingPage(props) {
               <IconButton
                 disableRipple
                 className={classes.chevronButton}
-                href='#whoweare'
+                to='/#whoweare'
                 color='primary'
+                scroll={(el) => scrollWithOffset(el)}
+                smooth
+                component={Link}
               >
                 <img
                   className={classes.chevron}

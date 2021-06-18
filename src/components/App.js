@@ -70,8 +70,8 @@ function App() {
           <Route path='#pastsales' exact component={PastSales} />
           <Route path='#whatwedo' exact component={WhatWeDo} />
         </Switch>
+        <LandingPage />
       </BrowserRouter>
-      <LandingPage />
       <WhoWeAre whoWeAreObject={whoWeAre} />
       <WhatWeDo whatWeDoObject={whatWeDo} />
       <PastSales />

@@ -19,6 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import scrollWithOffset from '../Scroll';
 
 import SectionHeader from './SectionHeader';
 
@@ -144,9 +145,9 @@ export default function Header({
   };
 
   const routes = [
-    { name: 'Past Sales', link: '/#pastsales', activeIndex: 1 },
-    { name: 'Who We Are', link: '/#whoweare', activeIndex: 2 },
-    { name: 'Services', link: '/#services', activeIndex: 3 },
+    { name: 'Who We Are', link: '/#whoweare', activeIndex: 1 },
+    { name: 'What We Do', link: '/#whatwedo', activeIndex: 2 },
+    { name: 'The Difference', link: '/#thedifference', activeIndex: 3 },
     { name: 'Contact Us', link: '/#contact', activeIndex: 4 },
   ];
 
@@ -179,9 +180,11 @@ export default function Header({
           <Tab
             key={`${route}${index}`}
             className={classes.tab}
+            smooth
             component={Link}
             to={route.link}
             label={route.name}
+            scroll={(el) => scrollWithOffset(el)}
           />
         ))}
       </Tabs>
@@ -205,6 +208,7 @@ export default function Header({
               divider
               key={`${route}${route.activeIndex}`}
               button
+              smooth
               component={Link}
               to={route.link}
               selected={value === route.activeIndex}
@@ -213,6 +217,7 @@ export default function Header({
                 setOpenDrawer(false);
                 setValue(route.activeIndex);
               }}
+              scroll={(el) => scrollWithOffset(el)}
             >
               <ListItemText className={classes.drawerItem} disableTypography>
                 {route.name}
@@ -241,6 +246,8 @@ export default function Header({
               to='/#top'
               disableRipple
               className={classes.logoContainer}
+              smooth
+              scroll={(el) => scrollWithOffset(el)}
               onClick={() => {
                 setValue();
               }}

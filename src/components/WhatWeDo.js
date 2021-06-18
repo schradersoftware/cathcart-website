@@ -27,15 +27,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     [theme.breakpoints.only('xs')]: {
       marginBottom: '2em',
-      height: '145vh',
+      height: '50vh',
     },
     [theme.breakpoints.only('sm')]: {
       marginBottom: '2em',
-      height: '145vh',
+      height: '50vh',
     },
     [theme.breakpoints.only('md')]: {
       marginBottom: '2em',
-      height: '145vh',
+      height: '50vh',
       width: '65vw',
     },
     [theme.breakpoints.only('lg')]: {
@@ -53,17 +53,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const whatWeDoObject = {
-  barColor: 'teal',
-  titleColor: 'teal',
-};
-
 export default function WhatWeDo({ whatWeDoObject }) {
   const classes = useStyles();
   const theme = useTheme();
 
   return (
     <React.Fragment>
+      <div id='whatwedo'></div>
       <Grid
         container
         direction='row'

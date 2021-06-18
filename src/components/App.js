@@ -3,12 +3,13 @@ import Header from './ui/Header';
 import LandingPage from './LandingPage';
 import ContactUs from './ContactUs';
 import PastSales from './PastSales';
-import Services from './Services';
+import TheDifference from './TheDifference';
 import WhoWeAre from './WhoWeAre';
 import WhatWeDo from './WhatWeDo';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const header = [
   {
@@ -23,25 +24,32 @@ const whatWeDo = {
   },
   cards: [
     {
-      title: "Selling!",
-      copy: "We work with our clients to develop a customized plan to help sell their properties on the open market for the best price.",
+      title: 'Selling',
+      copy: 'We work with our clients to develop a customized plan to help sell their properties on the open market for the best price.',
       // imageUrl: "/src/assets/checklist.svg",
-      imageUrl: "{checklist}",
-      imageTitle: "Email"
+      imageUrl: '{checklist}',
+      imageTitle: 'Email',
     },
     {
-      title: "Evaluation!",
-      copy: "This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area.",
-      imageUrl: "whatwedo1",
-      imageTitle: "Checklist"
+      title: 'Evaluation',
+      copy: 'This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area. This is the evaluation copy area.',
+      imageUrl: 'whatwedo1',
+      imageTitle: 'Checklist',
     },
     {
-      title: "Negotiation!!",
-      copy: "There are no upfront costs to our services. Our competitive commission structure ensures that our team will work tirelessly.",
-      imageUrl: "email",
-      imageTitle: "House"
+      title: 'Negotiation',
+      copy: 'There are no upfront costs to our services. Our competitive commission structure ensures that our team will work tirelessly.',
+      imageUrl: 'email',
+      imageTitle: 'House',
     },
-  ]
+  ],
+};
+
+const whoWeAre = {
+  sectionHeader: {
+    barColor: '#FFDC00',
+    titleColor: '#FFDC00',
+  },
 };
 
 function App() {
@@ -61,14 +69,15 @@ function App() {
           <Route path='#pastsales' exact component={PastSales} />
           <Route path='#whoweare' exact component={WhoWeAre} />
           <Route path='#pastsales' exact component={PastSales} />
-          <Route path='#whoweare' exact component={WhoWeAre} />
+          <Route path='#whatwedo' exact component={WhatWeDo} />
         </Switch>
       </BrowserRouter>
       <LandingPage />
-      <WhatWeDo  whatWeDoObject={whatWeDo} />
+      <WhoWeAre whoWeAreObject={whoWeAre} />
+      <WhatWeDo whatWeDoObject={whatWeDo} />
       <PastSales />
-      <WhoWeAre />
-      <Services />
+
+      <TheDifference />
       <ContactUs />
     </ThemeProvider>
   );

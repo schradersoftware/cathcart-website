@@ -15,7 +15,7 @@ export default function TheDifference(props) {
   return (
     <div
       id='thedifference'
-      style={{ height: '2200px', backgroundColor: '#85144b' }}
+      style={{ height: '2200px'}}
     ></div>
   );
 }

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import Header from './ui/Header';
 import LandingPage from './LandingPage';
-import ContactUs from './ContactUs';
+// import ContactUs from './ContactUs';
 import PastSales from './PastSales';
 import TheDifference from './TheDifference';
 import WhoWeAre from './WhoWeAre';
 import WhatWeDo from './WhatWeDo';
+import ContactUs from './contact-us/ContactUs'
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
+import GoogleMap from './GoogleMap.jsx';
 
 const header = [
   {
@@ -51,6 +53,12 @@ const whoWeAre = {
   },
 };
 
+const location = {
+  address: 'Cleveland Apartment Brokers',
+  lat: 41.4523811,
+  lng: -81.78998120059272,
+}
+
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [value, setValue] = useState(0);
@@ -75,9 +83,9 @@ function App() {
       <WhoWeAre whoWeAreObject={whoWeAre} />
       <WhatWeDo whatWeDoObject={whatWeDo} />
       <PastSales />
-
       <TheDifference />
       <ContactUs />
+      {/* <GoogleMap location={location} zoomLevel={18} /> */}
     </ThemeProvider>
   );
 }

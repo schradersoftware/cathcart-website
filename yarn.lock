@@ -1218,6 +1218,13 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
+"@googlemaps/js-api-loader@^1.7.0":
+  "integrity" "sha512-Nmk7pKn/819zIC0QTE5eA+kNmYpODQXyoCdk17nWiqx42gcb6NQEwssAuH/Aa+HeF0+ICYf5khIxDyY5njWJdg=="
+  "resolved" "https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.12.1.tgz"
+  "version" "1.12.1"
+  dependencies:
+    "fast-deep-equal" "^3.1.3"
+
 "@hapi/address@2.x.x":
   "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
   "resolved" "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -1249,6 +1256,16 @@
   "version" "3.1.6"
   dependencies:
     "@hapi/hoek" "^8.3.0"
+
+"@iconify/icons-mdi@^1.1.15":
+  "integrity" "sha512-H2dwj/vlBXd9Gc7d66m8ZW/8TZcxshMwIoyUkyTMft1mnGqsxJWq5QEWnX+jkmL8KKGR/czqh6p9sEe67Laq6Q=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-mdi/-/icons-mdi-1.1.15.tgz"
+  "version" "1.1.15"
+
+"@iconify/react@^1.1.4":
+  "integrity" "sha512-oxq8IMOq8q3nKGiDHbQPC8FcFuBsKve68JWBo140d5LRnj0bv5TB/FE/y01ZSvEZ7PlI2HIrnb2qivPN8kTDgw=="
+  "resolved" "https://registry.npmjs.org/@iconify/react/-/react-1.1.4.tgz"
+  "version" "1.1.4"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   "integrity" "sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ=="
@@ -1436,6 +1453,11 @@
     "@types/node" "*"
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
+
+"@mapbox/point-geometry@^0.1.0":
+  "integrity" "sha1-ioP5M1x4YO/6Lu7KJUMyqgru2PI="
+  "resolved" "https://registry.npmjs.org/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz"
+  "version" "0.1.0"
 
 "@material-ui/core@^4.11.4":
   "integrity" "sha512-oqb+lJ2Dl9HXI9orc6/aN8ZIAMkeThufA5iZELf2LQeBn2NtjVilF5D2w7e9RpntAzDb4jK5DsVhkfOvFY/8fg=="
@@ -4927,7 +4949,7 @@
   "resolved" "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   "version" "1.8.1"
 
-"eventemitter3@^4.0.0":
+"eventemitter3@^4.0.0", "eventemitter3@^4.0.4":
   "integrity" "sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw=="
   "resolved" "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   "version" "4.0.7"
@@ -5534,6 +5556,16 @@
     "ignore" "^5.1.4"
     "merge2" "^1.3.0"
     "slash" "^3.0.0"
+
+"google-map-react@^2.1.10":
+  "integrity" "sha512-cqW2EcygYqF26inp5liM/pAcCwOGXB9LW32oGwf931Iuq8tnasCpyEtq87G+RyQCKCo2P8/QyV+MGHuc7r9AEg=="
+  "resolved" "https://registry.npmjs.org/google-map-react/-/google-map-react-2.1.10.tgz"
+  "version" "2.1.10"
+  dependencies:
+    "@googlemaps/js-api-loader" "^1.7.0"
+    "@mapbox/point-geometry" "^0.1.0"
+    "eventemitter3" "^4.0.4"
+    "prop-types" "^15.7.2"
 
 "graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4":
   "integrity" "sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ=="
@@ -7394,6 +7426,13 @@
   dependencies:
     "object-visit" "^1.0.0"
 
+"material-ui-image@^3.3.2":
+  "integrity" "sha512-WE5QE0Rjdx9jPKuI0LWI7s8VQ9cifPIXObu8AUCRcidXGV3NqPI9C8c9A/C0MofKpkZ3buG8+IT9N7GgSmxXeg=="
+  "resolved" "https://registry.npmjs.org/material-ui-image/-/material-ui-image-3.3.2.tgz"
+  "version" "3.3.2"
+  dependencies:
+    "prop-types" "^15.5.8"
+
 "md5.js@^1.3.4":
   "integrity" "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg=="
   "resolved" "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz"
@@ -9165,7 +9204,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.5.8", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9366,7 +9405,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^17.0.2":
+"react-dom@^16.0.0 || ^17.0.0", "react-dom@^17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -9517,7 +9556,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^17.0.2":
+"react@^16.0.0 || ^17.0.0", "react@^17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

@@ -22,34 +22,29 @@ const useStyles = makeStyles((theme) => ({
     height: 300,
   },
   cardContainer: {
-    marginTop: '4em',
-    maxWidth: '65vw',
+    display: "flex",
+    marginTop: '3em',
+    marginBottom: '5em',
+    alignItems: "center",
+    justifyContent: "center",
+    maxWidth: '80%',
+    flexWrap: "nowrap",
     justifyContent: 'space-around',
-    [theme.breakpoints.only('xs')]: {
-      marginBottom: '2em',
-      height: '50vh',
-    },
-    [theme.breakpoints.only('sm')]: {
-      marginBottom: '2em',
-      height: '50vh',
-    },
-    [theme.breakpoints.only('md')]: {
-      marginBottom: '2em',
-      height: '50vh',
-      width: '65vw',
-    },
-    [theme.breakpoints.only('lg')]: {
-      marginBottom: '2em',
-    },
-    [theme.breakpoints.only('xl')]: {
-      marginBottom: '2em',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: "column",
     },
   },
-  contentContainer: {
-    marginTop: '4em',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '2em',
+  card: {
+    margin: '1rem',
+    padding: "1.5rem",
+    textAlign: "left",
+    width: "30%",
+    height: "85%",
+    [theme.breakpoints.down('md')]: {
+      margin: '2rem',
+      width: "65%",
     },
+    
   },
 }));
 
@@ -64,10 +59,10 @@ export default function WhatWeDo({ whatWeDoObject }) {
         container
         direction='row'
         justify='center'
-        className={classes.contentContainer}
+        
       >
         <SectionHeader
-          title='WHAT WE DO'
+          title={whatWeDoObject.sectionHeader.title}
           barColor={whatWeDoObject.sectionHeader.barColor}
           titleColor={whatWeDoObject.sectionHeader.titleColor}
         />
@@ -81,10 +76,9 @@ export default function WhatWeDo({ whatWeDoObject }) {
         >
           {whatWeDoObject.cards.map((card, index) => {
             return (
-              <Card key={`${index}`} className={classes.root}>
+              <Card key={`${index}`} className={classes.card}>
                 <CardActionArea>
                   <CardMedia
-                    // style={{ height: '20px', paddingTop: '56%' }}
                     className={classes.media}
                     image={email}
                     title={card.imageTitle}

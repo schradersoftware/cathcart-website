@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, useTheme, withTheme } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   titleContainer: {
@@ -28,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
 export default function SectionHeader({ title, barColor, titleColor }) {
   const classes = useStyles();
   const theme = useTheme();
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+
 
   return (
     <Grid container>
@@ -51,7 +54,7 @@ export default function SectionHeader({ title, barColor, titleColor }) {
             backgroundColor: barColor,
             border: 'none',
             width: '9%',
-            height: '1em',
+            height: matchesXS ? '.5em' : '1em',
           }}
         />
       </Grid>

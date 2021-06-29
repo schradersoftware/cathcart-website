@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: '4.5rem',
     [theme.breakpoints.down('xs')]: {
-      fontSize: '3.5rem'
+      fontSize: '2rem'
     }
   },
 

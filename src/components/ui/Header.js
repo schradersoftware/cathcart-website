@@ -145,8 +145,8 @@ export default function Header({
   };
 
   const routes = [
-    { name: 'Who We Are', link: '/#whoweare', activeIndex: 1 },
-    { name: 'What We Do', link: '/#whatwedo', activeIndex: 2 },
+    { name: 'What We Do', link: '/#whatwedo', activeIndex: 1 },
+    { name: 'Who We Are', link: '/#whoweare', activeIndex: 2 },
     { name: 'The Difference', link: '/#thedifference', activeIndex: 3 },
     { name: 'Contact Us', link: '/#contact', activeIndex: 4 },
   ];

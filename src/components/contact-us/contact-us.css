@@ -5,12 +5,12 @@
 
 @media screen and (min-width: 799px) {
   .contact-us {
-    --offset-height: -100px;
+    /* --offset-height: -100px;
 
-    display: grid;
+    display: grid; 
     grid-template-columns: 3fr 1.5fr;
     width: 80vw;
-    /* height: 475px; */
+    height: 475px;
     margin: 0 auto;
     top: var(--offset-height);
     left: 40.38%;
@@ -19,6 +19,6 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15); */
   }
 }

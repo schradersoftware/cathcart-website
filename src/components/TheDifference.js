@@ -16,11 +16,27 @@ import email from '../assets/email.svg';
 import checklist from '../assets/checklist.svg';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 320,
+
+  // card: {
+  //   width: '100vw',
+  //   margin: 'auto',
+  //   backgroundColor: color.background.default
+  // },
+  // container: {
+  //   maxWidth: '1080px',
+  //   padding: '5%',
+  //   margin: 'auto',
+  // },
+  // root: {
+  //   maxWidth: 320,
+  // },
+  parentContainer: {
+    marginTop: '5em',
+    marginBottom: '5em',
+
   },
   media: {
-    height: 300,
+    aspectRatio: 1.25
   },
   cardContainer: {
     display: "flex",
@@ -40,10 +56,13 @@ const useStyles = makeStyles((theme) => ({
     margin: '1rem',
     padding: "1.5rem",
     textAlign: "left",
-    width: "30%",
-    height: "42%",
+    width: "40%",
+    height: "45%",
     [theme.breakpoints.down('md')]: {
-      // flexDirection: "column",
+      margin: '2rem',
+      width: "65%",
+    },
+    [theme.breakpoints.down('sm')]: {
       margin: '2rem',
       width: "95%",
     },
@@ -57,54 +76,54 @@ export default function TheDifference({ theDifferenceObject }) {
 
   return (
     <React.Fragment>
-      <div id='thedifference'></div>
-      <Grid
-        container
-        direction='row'
-        justify='center'
-        
-      >
-        <SectionHeader
-          title={theDifferenceObject.sectionHeader.title}
-          barColor={theDifferenceObject.sectionHeader.barColor}
-          titleColor={theDifferenceObject.sectionHeader.titleColor}
-        />
+      <div id='thedifference' className={classes.parentContainer}>
         <Grid
           container
-          xs={12}
           direction='row'
-          justify='space-evenly'
-          alignItems='center'
-          className={classes.cardContainer}
+          justify='center'
+          
         >
-          {theDifferenceObject.cards.map((card, index) => {
-            return (
-              <Card key={`${index}`} className={classes.card}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={card.imageUrl}
-                    title={card.imageTitle}
-                  />
-
-                  <CardContent>
-                    <Typography gutterBottom variant='h5' component='h2'>
-                      {card.title}
-                    </Typography>
-                    <Typography
-                      variant='body2'
-                      color='textSecondary'
-                      component='p'
-                    >
-                      {card.copy}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            );
-          })}
+          <SectionHeader
+            title={theDifferenceObject.sectionHeader.title}
+            barColor={theDifferenceObject.sectionHeader.barColor}
+            titleColor={theDifferenceObject.sectionHeader.titleColor}
+          />
+          <Grid
+            container
+            xs={12}
+            direction='row'
+            justify='space-evenly'
+            alignItems='center'
+            className={classes.cardContainer}
+          >
+            {theDifferenceObject.cards.map((card, index) => {
+              return (
+                <Card key={`${index}`} className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image={card.imageUrl}
+                      title={card.imageTitle}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant='h5' component='h2'>
+                        {card.title}
+                      </Typography>
+                      <Typography
+                        variant='body2'
+                        color='textSecondary'
+                        component='p'
+                      >
+                        {card.copy}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })}
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </React.Fragment>
   );
 }

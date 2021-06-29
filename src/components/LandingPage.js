@@ -86,7 +86,7 @@ export default function LandingPage(props) {
               <IconButton
                 disableRipple
                 className={classes.chevronButton}
-                to='/#whoweare'
+                to='/#whatwedo'
                 color='primary'
                 scroll={(el) => scrollWithOffset(el)}
                 smooth

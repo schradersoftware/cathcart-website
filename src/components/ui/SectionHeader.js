@@ -18,10 +18,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat, sans-serif',
     textTransform: 'None',
     fontWeight: 600,
-    fontSize: '4.5rem',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '2rem'
-    }
+    fontSize: '4rem',
+    [theme.breakpoints.only('md')]: {
+      fontSize: '3.5rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3rem'
+    },
   },
 
 }));
@@ -29,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SectionHeader({ title, barColor, titleColor }) {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  const matchesXS = useMediaQuery(theme.breakpoints.down('sm'));
 
 
   return (
@@ -54,6 +57,7 @@ export default function SectionHeader({ title, barColor, titleColor }) {
             backgroundColor: barColor,
             border: 'none',
             width: '9%',
+            marginTop: '25px',
             height: matchesXS ? '.5em' : '1em',
           }}
         />

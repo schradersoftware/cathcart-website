@@ -15,8 +15,11 @@ import email from '../assets/email.svg';
 import checklist from '../assets/checklist.svg';
 
 const useStyles = makeStyles((theme) => ({
+  parentContainer: {
+    marginTop: '5em',
+  },
   root: {
-    maxWidth: 320,
+    // maxWidth: 320,
   },
   media: {
     height: 300,
@@ -44,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
       margin: '2rem',
       width: "65%",
     },
-    
   },
 }));
 
@@ -54,7 +56,7 @@ export default function WhatWeDo({ whatWeDoObject }) {
 
   return (
     <React.Fragment>
-      <div id='whatwedo'></div>
+      <div id='whatwedo' className={classes.parentContainer}>
       <Grid
         container
         direction='row'
@@ -102,6 +104,7 @@ export default function WhatWeDo({ whatWeDoObject }) {
           })}
         </Grid>
       </Grid>
+      </div>
     </React.Fragment>
   );
 }

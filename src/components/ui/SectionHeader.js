@@ -20,24 +20,34 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: '4rem',
     [theme.breakpoints.only('md')]: {
-      fontSize: '3.5rem'
+      fontSize: '3.5rem',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '3rem'
+      fontSize: '3rem',
     },
   },
-
 }));
 
-export default function SectionHeader({ title, barColor, titleColor }) {
+export default function SectionHeader({
+  title,
+  barColor,
+  titleColor,
+  alignItems = 'center',
+  barWidth = '9%',
+}) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesXS = useMediaQuery(theme.breakpoints.down('sm'));
 
-
   return (
     <Grid container>
-      <Grid item className={classes.titleContainer}>
+      <Grid
+        item
+        className={classes.titleContainer}
+        style={{
+          alignItems: alignItems,
+        }}
+      >
         <Typography
           variant='h3'
           className={classes.title}
@@ -51,13 +61,17 @@ export default function SectionHeader({ title, barColor, titleColor }) {
       <Grid
         item
         className={classes.titleContainer}
+        style={{
+          alignItems: alignItems,
+        }}
       >
-        <hr
+        <div
           style={{
             backgroundColor: barColor,
             border: 'none',
-            width: '9%',
+            width: barWidth,
             marginTop: '25px',
+            marginBottom: '25px',
             height: matchesXS ? '.5em' : '1em',
           }}
         />

@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     maxWidth: '80%',
     flexWrap: 'wrap',
-    justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
       flexWrap: 'nowrap',

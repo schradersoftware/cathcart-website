@@ -9,14 +9,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Image from 'material-ui-image'
+import Image from 'material-ui-image';
 
 import whatwedo1 from '../assets/whatwedo1.jpeg';
 import email from '../assets/email.svg';
 import checklist from '../assets/checklist.svg';
 
 const useStyles = makeStyles((theme) => ({
-
   // card: {
   //   width: '100vw',
   //   margin: 'auto',
@@ -33,40 +32,38 @@ const useStyles = makeStyles((theme) => ({
   parentContainer: {
     marginTop: '5em',
     marginBottom: '5em',
-
   },
   media: {
-    aspectRatio: 1.25
+    aspectRatio: 1.25,
   },
   cardContainer: {
-    display: "flex",
+    display: 'flex',
     marginTop: '3em',
     marginBottom: '5em',
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     maxWidth: '80%',
-    flexWrap: "wrap",
+    flexWrap: 'wrap',
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
-      flexDirection: "column",
-      flexWrap: 'nowrap'
+      flexDirection: 'column',
+      flexWrap: 'nowrap',
     },
   },
   card: {
     margin: '1rem',
-    padding: "1.5rem",
-    textAlign: "left",
-    width: "40%",
-    height: "45%",
+    padding: '1.5rem',
+    textAlign: 'left',
+    width: '30%',
+    height: '45%',
     [theme.breakpoints.down('md')]: {
       margin: '2rem',
-      width: "65%",
+      width: '55%',
     },
     [theme.breakpoints.down('sm')]: {
       margin: '2rem',
-      width: "95%",
+      width: '75%',
     },
-    
   },
 }));
 
@@ -77,12 +74,7 @@ export default function TheDifference({ theDifferenceObject }) {
   return (
     <React.Fragment>
       <div id='thedifference' className={classes.parentContainer}>
-        <Grid
-          container
-          direction='row'
-          justify='center'
-          
-        >
+        <Grid container direction='row' justify='center'>
           <SectionHeader
             title={theDifferenceObject.sectionHeader.title}
             barColor={theDifferenceObject.sectionHeader.barColor}

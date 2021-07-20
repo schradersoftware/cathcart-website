@@ -57,11 +57,19 @@ const useStyles = makeStyles((theme) => ({
     height: '45%',
     [theme.breakpoints.down('md')]: {
       margin: '2rem',
-      width: '55%',
+      width: '75%',
     },
     [theme.breakpoints.down('sm')]: {
       margin: '2rem',
-      width: '75%',
+      width: '95%',
+    },
+  },
+  title: {
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '10px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '10px',
     },
   },
 }));

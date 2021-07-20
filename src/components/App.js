@@ -4,7 +4,7 @@ import LandingPage from './LandingPage';
 import TheDifference from './TheDifference';
 import WhoWeAre from './WhoWeAre';
 import WhatWeDo from './WhatWeDo';
-import ContactUs from './contact-us/ContactUs'
+import ContactUs from './contact-us/ContactUs';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
@@ -21,7 +21,7 @@ const whatWeDo = {
   sectionHeader: {
     barColor: 'teal',
     titleColor: 'teal',
-    title: 'WHAT WE DO'
+    title: 'WHAT WE DO',
   },
   cards: [
     {
@@ -76,14 +76,14 @@ const whoWeAre = {
       imageUrl: '',
       imageTitle: '',
     },
-  ]
+  ],
 };
 
 const theDifference = {
   sectionHeader: {
     barColor: 'olive',
     titleColor: 'olive',
-    title: 'THE DIFFERENCE'
+    title: 'THE DIFFERENCE',
   },
   cards: [
     {
@@ -118,7 +118,7 @@ const location = {
   address: 'Cleveland Apartment Brokers',
   lat: 41.4523811,
   lng: -81.78998120059272,
-}
+};
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -144,11 +144,10 @@ function App() {
       <WhatWeDo whatWeDoObject={whatWeDo} />
       <WhoWeAre whoWeAreObject={whoWeAre} />
       <TheDifference theDifferenceObject={theDifference} />
-      {/* <ContactUs /> */}
-      <Contact />
+      <ContactUs />
+      {/* <Contact /> */}
     </ThemeProvider>
   );
 }
 
 export default App;
-

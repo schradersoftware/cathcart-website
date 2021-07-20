@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import scrollWithOffset from './Scroll';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import background2 from '../assets/background2.jpg';
+import background from '../assets/background.jpg';
 import chevron from '../assets/chevron-down.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   background: {
-    backgroundImage: `url(${background2})`,
+    backgroundImage: `url(${background})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',

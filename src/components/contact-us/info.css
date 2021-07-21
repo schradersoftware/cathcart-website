@@ -1,6 +1,6 @@
 .info {
   text-align: left;
-  padding: 20px;
+  padding: 0 20px;
   background-color: var(--main-green);
   color: var(--white);
 }

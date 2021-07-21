@@ -1,5 +1,7 @@
-import React from 'react'
-import { Icon, InlineIcon } from '@iconify/react'
+import React from 'react';
+import {Link} from '@material-ui/core';
+
+import { Icon, InlineIcon } from '@iconify/react';
 
 import locationIcon from '@iconify/icons-mdi/map-marker-radius-outline'
 import phoneIcon from '@iconify/icons-mdi/phone-outline'
@@ -9,7 +11,7 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import linkedinIcon from '@iconify/icons-mdi/linkedin'
 import twitterIcon from '@iconify/icons-mdi/twitter'
 
-import './info.css'
+import './info.css';
 
 const contactDetails = [
   {
@@ -33,13 +35,27 @@ const renderIcons = () =>
   ))
 
 const Info = () => (
-  <section className="info">
-    <h2 className="info-h2">Contact information</h2>
-
+  <>
+  <div className="info">
+    {/* <h2 className="info-h2">Contact information</h2>
     <div className="info-details-container">{renderContactDetails()}</div>
-
-    <div className="info-icons-container">{renderIcons()}</div>
-  </section>
+    <div className="info-icons-container">{renderIcons()}</div> */}
+    <div className="headingContent">
+       <h2>Our Offices</h2>
+       <p>1600 Cleveland Ave<br/>
+         Cleveland NY 90210</p>
+       <p><Link href="mailto:stevecathcart@gmail.com">stevecathcart@gmail.com</Link><br/>
+         Tel: <Link href="tell:111-222-3333">111-222-3333</Link><br/>
+         Fax: <Link href="fax:111-222-3333">111-222-3333</Link><br/></p>       
+    </div>
+    <div className="headingContent bordered">
+       <h2>Opportunities</h2>
+       <p>For additional listing opportunities with West River Realty, please send an email to: <Link href="mailto:stevecathcart@gmail.com">stevecathcart@gmail.com</Link></p>       
+    </div>
+  </div>
+  
+</>
 )
-
 export default Info
+
+

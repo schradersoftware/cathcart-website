@@ -6,7 +6,8 @@ import LocationPin from './LocationPin.jsx';
 
 const GoogleMap = ({ location, zoomLevel }) => (
   <div className="map">
-    <h2 className="map-h2">Find Us</h2>
+
+    <h2 className="headingText map-h2">Contact Us</h2>
 
     <div className="google-map">
       <GoogleMapReact

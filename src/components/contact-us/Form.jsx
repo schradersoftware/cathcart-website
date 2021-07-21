@@ -1,4 +1,6 @@
 import React from 'react'
+import {Box, useMediaQuery} from '@material-ui/core'
+import { useTheme } from '@material-ui/styles';
 import { Icon } from '@iconify/react'
 import sendCircle from '@iconify/icons-mdi/send-circle'
 
@@ -26,32 +28,32 @@ const formInputs = [
   },
 ]
 
-const Form = () => (
-  <form className="form">
-    <h2 className="form-h2">Send us a message</h2>
-
-    {formInputs.map(input => (
-      <label key={input.label} id={input.id} className="form-label">
-        {input.label}
-
-        {input.type === 'textarea' ? (
-          <textarea className="form-textarea" placeholder={input.placeholder} />
-        ) : (
-          <input
-            className="form-input"
-            type={input.type}
-            placeholder={input.placeholder}
-          />
-        )}
-      </label>
-    ))}
-
-    <Icon className="form-submit" icon={sendCircle} />
-
-    {/* <button className="form-submit" type="submit">
-      Send message
-    </button> */}
-  </form>
-)
+const Form = () => {
+  const theme = useTheme()
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm')); 
+  return (
+    <form className="form">
+      <Box style={matchesSM ? {width: '92vw'} : {}}></Box>
+      {formInputs.map(input => (
+        <label key={input.label} id={input.id} className="form-label">
+          {/* {input.label} */}
+          {input.type === 'textarea' ? (
+            <textarea className="formField form-textarea" placeholder={input.placeholder} />
+          ) : (
+            <input
+              className="formField form-input"
+              type={input.type}
+              placeholder={input.placeholder}
+            />
+          )}
+        </label>
+      ))}
+      <div className="buttonOuter text-end">
+        <button className="form-submit" type="submit">Submit</button>
+      </div>
+      {/* <Icon className="form-submit" icon={sendCircle} /> */}
+    </form>
+  )
+} 
 
 export default Form

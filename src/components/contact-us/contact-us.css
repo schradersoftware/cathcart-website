@@ -1,24 +1,185 @@
-.contact-us {
-  background-color: var(--white);
-  width: 100%;
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap'); */
+
+body {
+  overflow-x: hidden;
 }
 
-@media screen and (min-width: 799px) {
-  .contact-us {
-    /* --offset-height: -100px;
+:root {
+  --fontFamily: 'Montserrat', sans-serif;
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --fontWeightExtraBold: 800;
+  --whiteColor: #fff;
+  --redColor: teal;
+  --greyColor: #292d2c;
+}
 
-    display: grid; 
-    grid-template-columns: 3fr 1.5fr;
-    width: 80vw;
-    height: 475px;
-    margin: 0 auto;
-    top: var(--offset-height);
-    left: 40.38%;
-    margin-left: -40vw;
-    margin-bottom: var(--offset-height);
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15); */
+.headingText {
+  position: relative;
+  font-size: 4rem;
+  font-weight: var(--fontWeightSemiBold);
+  margin: 0 0 30px;
+  padding: 0 0 25px;
+  color: var(--redColor);
+}
+.headingText::before {
+  content: '';
+  background-color: var(--redColor);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 9%;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.headingContent {
+  position: relative;
+  margin: 0 0 20px;
+}
+.headingContent + .headingContent {
+  margin-top: 30px;
+}
+.headingContent.bordered {
+  padding-bottom: 14%;
+}
+.headingContent.bordered::before {
+  content: '';
+  background-color: var(--redColor);
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.headingContent h2 {
+  font-size: 35px;
+  font-weight: var(--fontWeightSemiBold);
+  color: var(--greyColor);
+  margin: 0 0 10px;
+  padding: 0;
+}
+.headingContent p {
+  font-size: 18px;
+  font-weight: var(--fontWeightRegular);
+  color: var(--greyColor);
+  margin: 0;
+  line-height: 30px;
+}
+.headingContent p + p {
+  margin-top: 20px;
+}
+
+.contact-us {
+  width: 100%;
+  background-color: var(--white);
+  font-family: var(--fontFamily);
+}
+.google-map {
+  height: 600px;
+}
+
+.contactFormInner {
+  padding: 80px 0 30px;
+}
+.contactFormPart form {
+  padding: 0;
+  display: block;
+}
+.contactFormPart form > label {
+  display: block;
+  margin: 15px 0 0;
+}
+.contactFormPart form .formField {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  font-family: var(--fontFamily);
+  font-size: 15px;
+  height: 45px;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+.contactFormPart form textarea.formField {
+  height: 150px;
+  padding-top: 15px;
+  resize: none;
+}
+.contactFormPart form *:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.buttonOuter {
+  margin: 20px 0 0;
+}
+.buttonOuter.text-start {
+  text-align: left;
+}
+.buttonOuter.text-center {
+  text-align: center;
+}
+.buttonOuter.text-end {
+  text-align: right;
+}
+.contactFormPart form .form-submit {
+  min-width: 160px;
+  display: inline-block;
+  background-color: var(--redColor);
+  color: var(--whiteColor);
+  border: 0;
+  border-radius: 2px;
+  font-size: 22px;
+  font-weight: var(--fontWeightLight);
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 20px;
+  box-shadow: 0px 20px 10px -15px var(--greyColor);
+  transition: all 0.5s ease;
+}
+.contactFormPart form .form-submit:hover {
+  background-color: var(--greyColor);
+  color: var(--whiteColor);
+}
+
+body .footerOuter {
+  margin: 80px 0 0;
+}
+.copyrightText p {
+  font-size: 15px;
+  margin: 0;
+}
+.renderIconsPart .info-icons-container {
+  justify-content: flex-end;
+}
+.renderIconsPart .info-icon {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+  transition: all 0.5s ease;
+}
+.renderIconsPart .info-icon + .info-icon {
+  margin-left: 15px;
+}
+.renderIconsPart .info-icon:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.mobileForm {
+  display: none;
+}
+
+/*Media*/
+@media only screen and (max-width: 959px) {
+  .mobileForm {
+    display: block;
   }
 }

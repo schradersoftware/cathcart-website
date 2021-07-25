@@ -96,19 +96,19 @@ const theDifference = {
     {
       title: 'Presentation',
       copy: 'Professional photography and videography, drone footage, virtual tours, and dedicated showing services are just some of the ways we utilize the latest technologies to best market and show properties.',
-      imageUrl: './thedifference/presentation.png',
+      imageUrl: './thedifference/presentation.jpg',
       imageTitle: 'Checklist',
     },
     {
       title: 'Negotiation',
       copy: 'As multifamily owners and investors ourselves, we understand how crucial effective negotiation is in real estate sales. We pride ourselves on being tenacious negotiators and relentlessly pursue the best possible terms and price for our clients.',
-      imageUrl: './thedifference/negotiation.png',
+      imageUrl: './thedifference/negotiation.jpg',
       imageTitle: 'House',
     },
     {
       title: 'Network',
       copy: 'A successful sale is dependent upon many individuals across a variety of professions. Our years of experience and intentional approach to networking helps us leverage relationships and solve problems proactively.',
-      imageUrl: './thedifference/network.png',
+      imageUrl: './thedifference/network.jpg',
       imageTitle: 'House',
     },
   ],
@@ -145,7 +145,7 @@ function App() {
       <WhoWeAre whoWeAreObject={whoWeAre} />
       <TheDifference theDifferenceObject={theDifference} />
       <ContactUs />
-      {/* <Contact /> */}
+      <Contact />
     </ThemeProvider>
   );
 }

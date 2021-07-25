@@ -7,6 +7,7 @@ import { Icon, InlineIcon } from '@iconify/react';
 import Form from './Form';
 import Info from './Info';
 
+import emailjs from 'emailjs-com';
 import GoogleMap from "../GoogleMap.jsx";
 
 
@@ -28,6 +29,8 @@ const renderIcons = () =>
   ))
 
 const ContactUs = () => {
+
+
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm')); 
 

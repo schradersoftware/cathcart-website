@@ -3,6 +3,7 @@ import {Box, useMediaQuery} from '@material-ui/core'
 import { useTheme } from '@material-ui/styles';
 import { Icon } from '@iconify/react'
 import sendCircle from '@iconify/icons-mdi/send-circle'
+import emailjs from 'emailjs-com';
 
 import './form.css'
 
@@ -29,10 +30,31 @@ const formInputs = [
 ]
 
 const Form = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_1nwpeyk',
+        'template_g9g42q9',
+        e.target,
+        'user_P07Tx1xVAjmyvUS92nW0A'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
+
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm')); 
   return (
-    <form className="form">
+    <form onSubmit={sendEmail} className="form">
       <Box style={matchesSM ? {width: '92vw'} : {}}></Box>
       {formInputs.map(input => (
         <label key={input.label} id={input.id} className="form-label">

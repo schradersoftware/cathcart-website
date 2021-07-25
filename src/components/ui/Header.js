@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   tab: {
     ...theme.typography.tab,
+    fontFamily: 'Montserrat, sans-serif',
+    textTransform: 'None',
+    fontWeight: 200,
     minWidth: 10,
     marginLeft: '25px',
   },
@@ -145,10 +148,10 @@ export default function Header({
   };
 
   const routes = [
-    { name: 'What We Do', link: '/#whatwedo', activeIndex: 1 },
-    { name: 'Who We Are', link: '/#whoweare', activeIndex: 2 },
-    { name: 'The Difference', link: '/#thedifference', activeIndex: 3 },
-    { name: 'Contact Us', link: '/#contact', activeIndex: 4 },
+    { name: 'WHAT WE DO', link: '/#whatwedo', activeIndex: 1 },
+    { name: 'WHO WE ARE', link: '/#whoweare', activeIndex: 2 },
+    { name: 'THE DIFFERENCE', link: '/#thedifference', activeIndex: 3 },
+    { name: 'CONTACT US', link: '/#contact', activeIndex: 4 },
   ];
 
   useEffect(() => {

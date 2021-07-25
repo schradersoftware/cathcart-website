@@ -28,24 +28,26 @@ const useStyles = makeStyles((theme) => ({
     width: '20em',
   },
   personImage: {
-    width: '250px',
-    height: '250px',
+    width: '175px',
+    height: '175px',
     marginTop: 'auto',
     marginBottom: 'auto',
     marginRight: '20px',
     verticalAlign: 'middle',
+    borderRadius: '47%',
   },
   personImageMobile: {
     width: '150px',
-    height: '150',
+    height: '150px',
     marginTop: 'auto',
     marginBottom: 'auto',
     marginRight: '20px',
     marginLeft: '20px',
     verticalAlign: 'middle',
+    borderRadius: '47%',
   },
   infoText: {
-    color: 'white',
+    color: '#716b5f',
   },
 }));
 
@@ -67,7 +69,7 @@ export default function WhoWeAre({ whoWeAreObject }) {
               paddingLeft: '10%',
               paddingRight: '5%',
               paddingBottom: '5em',
-              backgroundColor: '#22261A',
+              backgroundColor: '#FFEECB',
             }}
           >
             <SectionHeader
@@ -84,21 +86,27 @@ export default function WhoWeAre({ whoWeAreObject }) {
                 gutterBottom
                 className={classes.infoText}
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur unde suscipit, quam beatae rerum inventore
-                consectetur, neque doloribus, cupiditate.
+                <strong>Ohio Apartment Brokers is a division of Lokal Real Estate.</strong><br/>
+                 Headquartered in Cleveland, Ohio. We are licensed real estate 
+                agents and have been involved in the sale of hundreds of multifamily 
+                units over the last several years.
               </Typography>
-              <Typography variant='body1' className={classes.infoText}>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
+              <br/>
+              <Typography 
+                variant='body1' 
+                className={classes.infoText}
+              >
+                While many real estate companies are focused on single family homes, 
+                <strong> Ohio Apartment Brokers is uniquely positioned in the multifamily and 
+                apartment building space.</strong> Our knowledge and experience with these
+                transactions means that our clients have experts working on their 
+                behalf to get their properties sold for a great price.
               </Typography>
-              <Typography className={classes.infoText}>
+              {/* <Typography className={classes.infoText}>
                 All the Lorem Ipsum generators on the Internet tend to repeat
                 predefined chunks as necessary, making this the first true
                 generator on the Internet.
-              </Typography>
+              </Typography> */}
             </>
           </Grid>
           <Grid
@@ -107,7 +115,10 @@ export default function WhoWeAre({ whoWeAreObject }) {
             className={classes.sectionContainer}
             style={{
               height: matchesSM ? '500px' : '100% !important', //500px for mobile
-              backgroundImage: `url(${personBg})`,
+              // backgroundImage: `url(${personBg})`,
+              // backgroundColor: 'white',
+              backgroundColor: '#2F4858',
+              // borderRadius: '15px',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
             }}

@@ -43,10 +43,12 @@ const useStyles = makeStyles((theme) => ({
   },
   chevron: {
     height: '6em',
-    fill: 'white',
+    fill: '#716b5f',
   },
   chevronButton: {
     marginTop: '500px',
+    fill: '#716b5f',
+    color: '#716b5f',
     '&:hover': {
       background: 'none',
       boxShadow: 'none',

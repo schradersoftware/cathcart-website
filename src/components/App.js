@@ -19,8 +19,8 @@ const header = [
 
 const whatWeDo = {
   sectionHeader: {
-    barColor: 'teal',
-    titleColor: 'teal',
+    barColor: '#2A8091',
+    titleColor: '#2A8091',
     title: 'WHAT WE DO',
   },
   cards: [
@@ -48,8 +48,8 @@ const whatWeDo = {
 
 const whoWeAre = {
   sectionHeader: {
-    barColor: '#FFDC00',
-    titleColor: '#FFDC00',
+    barColor: '#4E4637',
+    titleColor: '#4E4637',
   },
   cards: [
     {
@@ -81,8 +81,8 @@ const whoWeAre = {
 
 const theDifference = {
   sectionHeader: {
-    barColor: 'olive',
-    titleColor: 'olive',
+    barColor: '#2A8091',
+    titleColor: '#2A8091',
     title: 'THE DIFFERENCE',
   },
   cards: [
@@ -145,7 +145,6 @@ function App() {
       <WhoWeAre whoWeAreObject={whoWeAre} />
       <TheDifference theDifferenceObject={theDifference} />
       <ContactUs />
-      <Contact />
     </ThemeProvider>
   );
 }

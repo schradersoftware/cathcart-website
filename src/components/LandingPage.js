@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     fill: 'white',
   },
   chevronButton: {
+    marginTop: '500px',
     '&:hover': {
       background: 'none',
       boxShadow: 'none',

@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
     fontFamily: 'Montserrat, sans-serif',
     textTransform: 'None',
-    fontWeight: 200,
+    fontWeight: 400,
     minWidth: 10,
     marginLeft: '25px',
   },

@@ -117,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
   drawerItem: {
     ...theme.typography.tab,
     color: 'white',
+    fontWeight: 400,
     opacity: 0.7,
   },
   drawerItemSelected: {

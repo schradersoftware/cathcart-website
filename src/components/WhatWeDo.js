@@ -10,9 +10,12 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
-import whatwedo1 from '../assets/whatwedo1.jpeg';
-import email from '../assets/email.svg';
-import checklist from '../assets/checklist.svg';
+// import whatwedo1 from '../assets/whatwedo1.jpeg';
+// import email from '../assets/email.svg';
+// import navigate from '../assets/navigate.jpg';
+// import consult from '../assets/consult.jpg';
+// import deliver from '../assets/deliver.jpg';
+
 
 const useStyles = makeStyles((theme) => ({
   parentContainer: {
@@ -82,7 +85,7 @@ export default function WhatWeDo({ whatWeDoObject }) {
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
-                    image={email}
+                    image={card.imageUrl}
                     title={card.imageTitle}
                   />
 

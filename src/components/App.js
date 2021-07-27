@@ -27,21 +27,20 @@ const whatWeDo = {
     {
       title: 'Consult',
       copy: 'Evaluating property specific information and analyzing market trends are vital first steps to our process. We develop customized, data-driven sales strategies to best satisfy the needs of our clients.',
-      // imageUrl: "/src/assets/checklist.svg",
-      imageUrl: '{checklist}',
-      imageTitle: 'Email',
+      imageUrl: './whatWeDo/consult.jpg',
+      imageTitle: 'Consult',
     },
     {
       title: 'Navigate',
       copy: 'Real estate sales can be complex and arduous, particularly in the multifamily space. Our team of professional and licensed agents are dedicated to guiding our clients through every step of the transaction.',
-      imageUrl: 'whatwedo1',
-      imageTitle: 'Checklist',
+      imageUrl: './whatWeDo/navigate.jpg',
+      imageTitle: 'Navigate',
     },
     {
       title: 'Deliver',
       copy: 'Completing the sale is of utmost importance. Communication with all involved parties is the key to our success in meeting pivotal milestones and crossing the finish line.',
-      imageUrl: 'email',
-      imageTitle: 'House',
+      imageUrl: './whatWeDo/deliver.jpg',
+      imageTitle: 'Deliver',
     },
   ],
 };

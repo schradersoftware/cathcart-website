@@ -11,7 +11,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Image from 'material-ui-image';
 
-import whatwedo1 from '../assets/whatwedo1.jpeg';
 import email from '../assets/email.svg';
 import checklist from '../assets/checklist.svg';
 

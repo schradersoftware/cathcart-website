@@ -9,7 +9,7 @@ import SectionHeader from './ui/SectionHeader';
 import Image from 'material-ui-image';
 
 import cathcartHeadshot from '../assets/cathcart.jpg';
-import personBg from '../assets/person_background.jpg';
+// import personBg from '../assets/person_background.jpg';
 
 const useStyles = makeStyles((theme) => ({
   parentContainer: {

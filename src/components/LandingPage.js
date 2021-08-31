@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     height: '60em',
     width: '100%',
     marginTop: '-7em',
+    // [theme.breakpoints.down('xs')]: {
+    //   marginBottom: '2em',
+    // },
   },
   chevron: {
     height: '6em',

@@ -63,7 +63,6 @@ const theDifference = {
     {
       title: 'Experience',
       copy: 'We have been involved in the sale of hundreds of multifamily units over the last several years. Our knowledge of both the sales process and local markets give us a competitive edge in any transaction.',
-      // imageUrl: "/src/assets/checklist.svg",
       imageUrl: './assets/thedifference/experience.jpg',
       imageTitle: 'Email',
     },
@@ -108,9 +107,7 @@ function App() {
           setSelectedIndex={setSelectedIndex}
         />
         <Switch>
-          {/* <Route path='#pastsales' exact component={PastSales} /> */}
           <Route path='#whoweare' exact component={WhoWeAre} />
-          {/* <Route path='#pastsales' exact component={PastSales} /> */}
           <Route path='#whatwedo' exact component={WhatWeDo} />
         </Switch>
         <LandingPage />

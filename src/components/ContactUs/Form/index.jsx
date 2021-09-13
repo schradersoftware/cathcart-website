@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 import sendCircle from '@iconify/icons-mdi/send-circle'
 import emailjs from 'emailjs-com';
 
-import './form.css'
+import './styles.css'
 
 const formInputs = [
   { id: 'name', type: 'text', label: 'Your name', placeholder: 'John Doe' },

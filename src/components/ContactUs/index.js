@@ -13,7 +13,7 @@ import facebookIcon from '@iconify/icons-mdi/facebook'
 import linkedinIcon from '@iconify/icons-mdi/linkedin'
 import twitterIcon from '@iconify/icons-mdi/twitter'
 
-import './ContactUs.css';
+import './styles.css';
 
 const location = {
   address: 'Cleveland Apartment Brokers',

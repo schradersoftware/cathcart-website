@@ -5,10 +5,10 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import Paper from "@material-ui/core/Paper";
-import SectionHeader from "./ui/SectionHeader";
+import SectionHeader from "../SectionHeader";
 
-import cathcartHeadshot from "../assets/cathcart.jpg";
-import groupPhoto from "../assets/about-us.png";
+import cathcartHeadshot from "../../assets/cathcart.jpg";
+import groupPhoto from "../../assets/about-us.png";
 
 const useStyles = makeStyles((theme) => ({
   parentContainer: {
@@ -77,25 +77,18 @@ export default function WhoWeAre({ whoWeAreObject }) {
                 className={classes.infoText}
               >
                 <strong>
-                  Ohio Apartment Brokers is a division of Lokal Real Estate.
+                {whoWeAreObject.bio.copy1}
                 </strong>
                 <br />
-                Headquartered in Cleveland, Ohio. We are licensed real estate
-                agents and have been involved in the sale of hundreds of
-                multifamily units over the last several years.
+                {whoWeAreObject.bio.copy2}
               </Typography>
               <br />
               <Typography variant="body1" className={classes.infoText}>
-                While many real estate companies are focused on single family
-                homes,
-                <strong>
-                  {" "}
-                  Ohio Apartment Brokers is uniquely positioned in the
-                  multifamily and apartment building space.
+                {whoWeAreObject.bio.copy3}
+                <strong>{" "}
+                {whoWeAreObject.bio.copy4}
                 </strong>{" "}
-                Our knowledge and experience with these transactions means that
-                our clients have experts working on their behalf to get their
-                properties sold for a great price.
+                {whoWeAreObject.bio.copy5}
               </Typography>
             </>
           </Grid>

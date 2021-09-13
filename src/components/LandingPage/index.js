@@ -4,11 +4,11 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import scrollWithOffset from './Scroll';
+import scrollWithOffset from '../../utils/Scroll';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import background from '../assets/background.jpg';
-import chevron from '../assets/chevron-down.svg';
+import background from '../../assets/background.jpg';
+import chevron from '../../assets/chevron-down.svg';
 
 const useStyles = makeStyles((theme) => ({
   card: {

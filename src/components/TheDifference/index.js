@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import SectionHeader from './ui/SectionHeader';
+import SectionHeader from '../SectionHeader';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -11,8 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Image from 'material-ui-image';
 
-import email from '../assets/email.svg';
-import checklist from '../assets/checklist.svg';
+import email from '../../assets/email.svg';
+import checklist from '../../assets/checklist.svg';
 
 const useStyles = makeStyles((theme) => ({
   // card: {

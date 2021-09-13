@@ -1,8 +1,7 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
 import './map.css'
-import LocationPin from './LocationPin.jsx';
-
+import LocationPin from './LocationPin';
 
 const GoogleMap = ({ location, zoomLevel }) => (
   <div className="map">

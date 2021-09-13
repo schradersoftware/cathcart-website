@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import SectionHeader from './ui/SectionHeader';
+import SectionHeader from '../SectionHeader';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';

@@ -19,9 +19,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import scrollWithOffset from '../Scroll';
+import scrollWithOffset from '../../utils/Scroll';
 
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../SectionHeader';
 
 import logo from '../../assets/logo.svg';
 

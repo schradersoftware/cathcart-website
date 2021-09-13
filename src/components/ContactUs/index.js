@@ -7,14 +7,13 @@ import { Icon, InlineIcon } from '@iconify/react';
 import Form from './Form';
 import Info from './Info';
 
-import GoogleMap from "../GoogleMap.jsx";
-
+import GoogleMap from './GoogleMap';
 
 import facebookIcon from '@iconify/icons-mdi/facebook'
 import linkedinIcon from '@iconify/icons-mdi/linkedin'
 import twitterIcon from '@iconify/icons-mdi/twitter'
 
-import './contact-us.css';
+import './ContactUs.css';
 
 const location = {
   address: 'Cleveland Apartment Brokers',

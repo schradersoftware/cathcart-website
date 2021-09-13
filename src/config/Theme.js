@@ -57,6 +57,5 @@ export default createMuiTheme({
       color: tertiaryColor,
       fontWeight: 300,
     },
-
   },
 });

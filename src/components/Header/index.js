@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appbar: {
-    background: `linear-gradient(45deg, ${theme.palette.common.blue}, 87%, #fff)`,
+    background: `linear-gradient(45deg, ${theme.palette.common.blue}, 95%, #fff)`,
     opacity: "95%",
     zIndex: theme.zIndex.modal + 1,
   },
